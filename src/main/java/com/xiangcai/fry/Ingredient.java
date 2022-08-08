@@ -2,7 +2,7 @@ package com.xiangcai.fry;
 
 import lombok.Data;
 
-//@Data
+@Data
 public class Ingredient {
     private final String id;
     private final String name;
