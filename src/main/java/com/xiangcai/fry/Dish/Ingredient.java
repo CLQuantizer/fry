@@ -1,12 +1,13 @@
-package com.xiangcai.fry;
+package com.xiangcai.fry.Dish;
 
 import lombok.Data;
 
 @Data
 public class Ingredient {
-    private final String name;
-    private final Type type;
     public enum Type {
         MEAT, CHILI, SEASONING, VEGGIES, OTHER
     }
+    private final String name;
+    private final Type type;
+
 }

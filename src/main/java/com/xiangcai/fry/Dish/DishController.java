@@ -1,7 +1,8 @@
-package com.xiangcai.fry;
+package com.xiangcai.fry.Dish;
 
+import com.xiangcai.fry.Bar;
+import com.xiangcai.fry.Dish.DishRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,11 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 @Controller
-public class BarController {
+public class DishController {
     @Autowired
-    private BarRepository barRepo;
+    private DishRepository barRepo;
 
-    @GetMapping("/bars")
+    @GetMapping("/dishes")
     public String listAll(Model model){
         List<Bar> listBars = barRepo.findAll();
         model.addAttribute("listBars", listBars);
